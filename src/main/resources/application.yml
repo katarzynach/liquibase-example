@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+spring:
+  liquibase:
+    change-log: classpath:db/changelog/changelog-master.xml
+  datasource:
+    url: {config.dbUrl}
+    username: {config.user}
+    password: {config.pass}
+    driver: {config.dbDriver}
+  jpa:
+    show-sql: true
+    database-platform: {config.dbPlatform}
+  h2:
+    console.enabled: true
+
